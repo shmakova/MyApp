@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentMoviesDetails">
+    tools:context=".details.FragmentMoviesDetails">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="226dp"
             android:fontFamily="sans-serif-black"
-            android:text="@string/movie_age_limit"
+            android:text="@string/movie_age_limit_stub"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/start_guideline"
@@ -142,7 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="sans-serif-black"
-            android:text="@string/movie_reviews"
+            android:text="@string/movie_reviews_stub"
             android:textAllCaps="true"
             android:textColor="@color/inactive_star_color"
             android:textSize="14sp"
@@ -191,110 +191,17 @@
             app:layout_constraintStart_toStartOf="@+id/start_guideline"
             app:layout_constraintTop_toBottomOf="@+id/movie_storyline" />
 
-        <ImageView
-            android:id="@+id/movie_star1"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/actors_list"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="8dp"
-            android:adjustViewBounds="true"
-            android:importantForAccessibility="no"
-            android:src="@drawable/actor1"
-            app:layout_constraintEnd_toStartOf="@+id/movie_star2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/end_guideline"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="@+id/start_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/movie_cast_title" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/movie_actor1_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/movie_actor1_name"
-            android:textColor="@color/actor_name_color"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/movie_star1"
-            app:layout_constraintStart_toStartOf="@+id/movie_star1"
-            app:layout_constraintTop_toBottomOf="@+id/movie_star1"
-            app:lineHeight="16sp" />
-
-        <ImageView
-            android:id="@+id/movie_star2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:adjustViewBounds="true"
-            android:importantForAccessibility="no"
-            android:src="@drawable/actor2"
-            app:layout_constraintEnd_toStartOf="@+id/movie_star3"
-            app:layout_constraintStart_toEndOf="@+id/movie_star1"
-            app:layout_constraintTop_toTopOf="@+id/movie_star1" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/movie_actor2_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/movie_actor2_name"
-            android:textColor="@color/actor_name_color"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/movie_star2"
-            app:layout_constraintStart_toStartOf="@+id/movie_star2"
-            app:layout_constraintTop_toBottomOf="@+id/movie_star2"
-            app:lineHeight="16sp" />
-
-        <ImageView
-            android:id="@+id/movie_star3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:adjustViewBounds="true"
-            android:importantForAccessibility="no"
-            android:src="@drawable/actor3"
-            app:layout_constraintEnd_toStartOf="@+id/movie_star4"
-            app:layout_constraintStart_toEndOf="@+id/movie_star2"
-            app:layout_constraintTop_toTopOf="@+id/movie_star2" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/movie_actor3_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/movie_actor3_name"
-            android:textColor="@color/actor_name_color"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/movie_star3"
-            app:layout_constraintStart_toStartOf="@+id/movie_star3"
-            app:layout_constraintTop_toBottomOf="@+id/movie_star3"
-            app:lineHeight="16sp" />
-
-        <ImageView
-            android:id="@+id/movie_star4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:importantForAccessibility="no"
-            android:src="@drawable/actor4"
-            app:layout_constraintEnd_toEndOf="@+id/end_guideline"
-            app:layout_constraintStart_toEndOf="@+id/movie_star3"
-            app:layout_constraintTop_toTopOf="@+id/movie_star3" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/movie_actor4_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/movie_actor4_name"
-            android:textColor="@color/actor_name_color"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/movie_star4"
-            app:layout_constraintStart_toStartOf="@+id/movie_star4"
-            app:layout_constraintTop_toBottomOf="@+id/movie_star4"
-            app:lineHeight="16sp" />
+            app:layout_constraintTop_toBottomOf="@+id/movie_cast_title"
+            tools:listitem="@layout/view_holder_actor" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/start_guideline"

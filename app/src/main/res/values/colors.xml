@@ -17,4 +17,6 @@
     <color name="movie_border_color">#535369</color>
     <color name="movie_bg_color">#262639</color>
     <color name="age_limit_bg_color">#191926</color>
+    <color name="active_like_color">#FF3365</color>
+    <color name="inactive_like_color">#BFFFFFFF</color>
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/movie_actor_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@id/movie_actor_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/actor1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/movie_actor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/actor_name_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/movie_actor_photo"
+        app:layout_constraintStart_toStartOf="@+id/movie_actor_photo"
+        app:layout_constraintTop_toBottomOf="@+id/movie_actor_photo"
+        app:lineHeight="16sp"
+        tools:text="@string/movie_actor1_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

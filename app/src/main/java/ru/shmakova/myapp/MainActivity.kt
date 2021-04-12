@@ -2,6 +2,8 @@ package ru.shmakova.myapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ru.shmakova.myapp.details.FragmentMoviesDetails
+import ru.shmakova.myapp.list.FragmentMoviesList
 
 class MainActivity : AppCompatActivity(), FragmentMoviesList.ItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
