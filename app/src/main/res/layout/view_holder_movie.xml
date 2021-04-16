@@ -32,8 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearance="@style/ShapeAppearance.LargeComponent"
-            tools:src="@drawable/movie_main_cover1" />
+            app:shapeAppearance="@style/ShapeAppearance.LargeComponent" />
 
         <ImageView
             android:id="@+id/movie_cover_mask"
@@ -75,7 +74,7 @@
             app:layout_constraintTop_toTopOf="@+id/movie_cover" />
 
         <TextView
-            android:id="@+id/movie_tagline"
+            android:id="@+id/movie_genres"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -83,13 +82,13 @@
             android:layout_marginBottom="4dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="@string/movie_tagline"
             android:textColor="@color/tagline_color"
             android:textSize="8sp"
             app:layout_constraintBottom_toTopOf="@+id/movie_rating"
             app:layout_constraintEnd_toEndOf="@+id/movie_cover"
             app:layout_constraintStart_toStartOf="@+id/movie_cover"
-            tools:ignore="SmallSp" />
+            tools:ignore="SmallSp"
+            tools:text="Action, Adventure, Fantasy" />
 
         <androidx.constraintlayout.helper.widget.Flow
             android:id="@+id/movie_rating"
@@ -101,7 +100,7 @@
             app:flow_wrapMode="chain"
             app:layout_constraintBottom_toBottomOf="@+id/movie_cover"
             app:layout_constraintEnd_toStartOf="@+id/movie_reviews"
-            app:layout_constraintStart_toStartOf="@+id/movie_tagline" />
+            app:layout_constraintStart_toStartOf="@+id/movie_genres" />
 
         <ImageView
             android:id="@+id/movie_rating_star1"
@@ -153,14 +152,14 @@
             android:textColor="@color/inactive_star_color"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="@+id/movie_rating"
-            app:layout_constraintEnd_toEndOf="@+id/movie_tagline"
+            app:layout_constraintEnd_toEndOf="@+id/movie_genres"
             app:layout_constraintStart_toEndOf="@+id/movie_rating"
             app:layout_constraintTop_toTopOf="@+id/movie_rating"
             tools:ignore="SmallSp"
             tools:text="@string/movie_reviews" />
 
         <TextView
-            android:id="@+id/movie_name"
+            android:id="@+id/movie_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -169,12 +168,12 @@
             android:ellipsize="end"
             android:fontFamily="sans-serif-black"
             android:maxLines="1"
-            android:text="@string/movie_name"
             android:textColor="@color/title_color"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/movie_cover" />
+            app:layout_constraintTop_toBottomOf="@+id/movie_cover"
+            tools:text="Avengers: End Game" />
 
         <TextView
             android:id="@+id/movie_duration"
@@ -189,9 +188,9 @@
             android:textColor="@color/time_color"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/movie_name"
-            app:layout_constraintStart_toStartOf="@+id/movie_name"
-            app:layout_constraintTop_toBottomOf="@+id/movie_name"
+            app:layout_constraintEnd_toEndOf="@+id/movie_title"
+            app:layout_constraintStart_toStartOf="@+id/movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title"
             tools:ignore="SmallSp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
